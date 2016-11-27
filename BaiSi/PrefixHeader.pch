@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  BaiSi
+//
+//  Created by 朱晓峰 on 2016/11/24.
+//  Copyright © 2016年 朱晓峰. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+XHZExtension.h"
+#import "UIBarButtonItem+XHZExtension.h"
+#import "XHZConst.h"
+
+#ifdef DEBUG
+#define XHZLog(...) NSLog(__VA_ARGS__)
+#else
+#define XHZLog(...)
+#endif
+
+#define XHZFUNC XHZLog(@"%s",__func__);
+#define XHZRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define XHZBGColor [UIColor colorWithRed:223/255.0 green:223/255.0 blue:223/255.0 alpha:1.0]
+#define XHZScreenH [UIScreen mainScreen].bounds.size.height
+#define XHZScreenW [UIScreen mainScreen].bounds.size.width
+#endif /* PrefixHeader_pch */

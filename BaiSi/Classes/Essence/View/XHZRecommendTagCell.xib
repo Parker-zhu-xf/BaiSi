@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tag" rowHeight="130" id="KGk-i7-Jjw" customClass="XHZRecommendTagCell">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="324" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Te6-WH-bgh">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="gjN-Ku-lgb"/>
+                            <constraint firstAttribute="height" constant="50" id="hOW-EY-L1I"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D5-Aj-z8L">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="PAd-Tl-MuE"/>
+                            <constraint firstAttribute="height" constant="25" id="rQh-L6-yRy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="FollowBtnClickBg">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guc-cW-GEQ">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ks7-hs-zAV">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ks7-hs-zAV" firstAttribute="leading" secondItem="Te6-WH-bgh" secondAttribute="trailing" constant="10" id="7Er-kR-yaz"/>
+                    <constraint firstItem="guc-cW-GEQ" firstAttribute="leading" secondItem="Te6-WH-bgh" secondAttribute="trailing" constant="10" id="GOc-kf-i6l"/>
+                    <constraint firstItem="Te6-WH-bgh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="OGF-q5-AFB"/>
+                    <constraint firstItem="8D5-Aj-z8L" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XrL-Vb-Cgq"/>
+                    <constraint firstItem="Te6-WH-bgh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b2w-JX-uMV"/>
+                    <constraint firstItem="Ks7-hs-zAV" firstAttribute="bottom" secondItem="Te6-WH-bgh" secondAttribute="bottom" id="bbv-1g-SMC"/>
+                    <constraint firstItem="8D5-Aj-z8L" firstAttribute="leading" secondItem="Ks7-hs-zAV" secondAttribute="trailing" constant="10" id="p4h-4a-1uJ"/>
+                    <constraint firstAttribute="trailing" secondItem="8D5-Aj-z8L" secondAttribute="trailing" constant="20" id="pJz-HC-eMg"/>
+                    <constraint firstItem="8D5-Aj-z8L" firstAttribute="leading" secondItem="guc-cW-GEQ" secondAttribute="trailing" constant="10" id="pVw-H6-4cE"/>
+                    <constraint firstItem="guc-cW-GEQ" firstAttribute="top" secondItem="Te6-WH-bgh" secondAttribute="top" id="vhD-k6-hXl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageListImageView" destination="Te6-WH-bgh" id="1wE-oG-y88"/>
+                <outlet property="subNumberLable" destination="Ks7-hs-zAV" id="mLf-fr-ikf"/>
+                <outlet property="themeNameLable" destination="guc-cW-GEQ" id="yAI-cg-gK2"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="161"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
+</document>
